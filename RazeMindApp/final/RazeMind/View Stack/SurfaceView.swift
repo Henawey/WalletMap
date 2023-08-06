@@ -51,7 +51,7 @@ struct SurfaceView: View {
       Text("zoom = \(zoomScale)")
       TextField("Breathe…", text: $selection.editingText, onCommit: {
         if let node = self.selection.onlySelectedNode(in: self.mesh) {
-          self.mesh.updateNodeText(node, string: self.self.selection.editingText)
+          self.mesh.updateNodeText(node, string: self.selection.editingText, subtext: node.subtext)
         }
       })
       // 2
@@ -59,7 +59,7 @@ struct SurfaceView: View {
         // 3
         ZStack {
           Rectangle().fill(Color.yellow)
-          MapView(selection: self.selection, mesh: self.mesh)
+          MapView(selection: self.selection, mesh: self.mesh, backgroundColor: .white)
             .scaleEffect(self.zoomScale)
             // 4
             .offset(

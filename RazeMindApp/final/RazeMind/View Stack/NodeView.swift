@@ -38,13 +38,20 @@ struct NodeView: View {
   var isSelected: Bool {
     return selection.isNodeSelected(node)
   }
+
+  @State private(set) var fillColor = Color.green
+  @State private(set) var selectedColor = Color.red
+  @State private(set) var frameColor = Color.black
   
   var body: some View {
     Ellipse()
-      .fill(Color.green)
+      .fill(fillColor)
       .overlay(Ellipse()
-        .stroke(isSelected ? Color.red : Color.black, lineWidth: isSelected ? 5 : 3))
-      .overlay(Text(node.text)
+        .stroke(isSelected ? selectedColor : frameColor, lineWidth: isSelected ? 5 : 3))
+      .overlay(VStack {
+        Text(node.text)
+        Text(node.subtext)
+      }
         .multilineTextAlignment(.center)
         .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)))
       .frame(width: NodeView.width, height: NodeView.width, alignment: .center)
@@ -54,9 +61,9 @@ struct NodeView: View {
 struct NodeView_Previews: PreviewProvider {
   static var previews: some View {
     let selection1 = SelectionHandler()
-    let node1 = Node(text: "hello world")
+    let node1 = Node(text: "hello world", subtext: "subtext")
     let selection2 = SelectionHandler()
-    let node2 = Node(text: "I'm selected, look at me")
+    let node2 = Node(text: "I'm selected, look at me", subtext: "subtext 2")
     selection2.selectNode(node2)
     
     return VStack {

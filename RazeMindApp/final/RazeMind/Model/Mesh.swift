@@ -78,9 +78,10 @@ class Mesh: ObservableObject {
 }
 
 extension Mesh {
-  func updateNodeText(_ srcNode: Node, string: String) {
+  func updateNodeText(_ srcNode: Node, string: String, subtext: String) {
     var newNode = srcNode
     newNode.text = string
+    newNode.subtext = subtext
     replace(srcNode, with: newNode)
   }
   

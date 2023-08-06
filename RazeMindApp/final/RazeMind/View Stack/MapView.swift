@@ -31,10 +31,12 @@ import SwiftUI
 struct MapView: View {
   @ObservedObject var selection: SelectionHandler
   @ObservedObject var mesh: Mesh
+
+  @State private(set) var backgroundColor = Color.orange
   
   var body: some View {
     ZStack {
-      Rectangle().fill(Color.orange)
+      Rectangle().fill(backgroundColor)
       EdgeMapView(edges: $mesh.links)
       NodeMapView(selection: selection, nodes: $mesh.nodes)
     }

@@ -35,6 +35,7 @@ struct Node: Identifiable {
   var id: NodeID = NodeID()
   var position: CGPoint = .zero
   var text: String = ""
+  var subtext: String = ""
 
   var visualID: String {
     return id.uuidString
