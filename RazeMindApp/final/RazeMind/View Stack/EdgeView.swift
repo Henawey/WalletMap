@@ -51,8 +51,38 @@ struct EdgeView: Shape {
     var linkPath = Path()
     linkPath.move(to: CGPoint(x: startx, y: starty)
       .alignCenterInParent(rect.size))
+
+    let point = CGPoint(x: endx, y: endy)
+
+    let control1: CGPoint
+    let control2: CGPoint
+
+    // combine to be based on slope calculation
+    let diffX = abs(endx - startx)
+    let diffY = abs(endy - starty)
+    let isYAxis = diffX < diffY
+    if isYAxis {
+      // y axis
+      control1 = CGPoint(x: startx, y: (endy + starty) / 2)
+      control2 = CGPoint(x: endx, y: (endy + starty) / 2)
+    } else {
+      // x axis
+      control1 = CGPoint(x: (endx + startx) / 2, y: starty)
+      control2 = CGPoint(x: (endx + startx) / 2, y: endy)
+    }
+
+
+    linkPath.addCurve(
+      to: point.alignCenterInParent(rect.size),
+      control1: control1.alignCenterInParent(rect.size),
+      control2: control2.alignCenterInParent(rect.size)
+    )
+
     linkPath.addLine(to: CGPoint(x: endx, y:endy)
       .alignCenterInParent(rect.size))
+
+    linkPath = linkPath.stroke(style: .init(lineJoin: .round))
+      .path(in: rect)
     return linkPath
   }
   
