@@ -44,9 +44,9 @@ struct NodeView: View {
   @State private(set) var frameColor = Color.black
   
   var body: some View {
-    Ellipse()
+    Capsule(style: .continuous)
       .fill(fillColor)
-      .overlay(Ellipse()
+      .overlay(Capsule(style: .continuous)
         .stroke(isSelected ? selectedColor : frameColor, lineWidth: isSelected ? 5 : 3))
       .overlay(VStack {
         Text(node.text)
@@ -54,7 +54,7 @@ struct NodeView: View {
       }
         .multilineTextAlignment(.center)
         .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)))
-      .frame(width: NodeView.width, height: NodeView.width, alignment: .center)
+      .frame(width: NodeView.width * 2, height: NodeView.width, alignment: .center)
   }
 }
 
