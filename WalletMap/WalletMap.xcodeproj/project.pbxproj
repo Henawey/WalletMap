@@ -13,8 +13,6 @@
 		EB67F9FD2A7FF62C00F8B48A /* WalletMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67F9FC2A7FF62C00F8B48A /* WalletMapTests.swift */; };
 		EB67FA072A7FF62C00F8B48A /* WalletMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FA062A7FF62C00F8B48A /* WalletMapUITests.swift */; };
 		EB67FA092A7FF62C00F8B48A /* WalletMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FA082A7FF62C00F8B48A /* WalletMapUITestsLaunchTests.swift */; };
-		EB7BBD4B2A82B50B004DC538 /* Mesh+Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C4D752A829D06002E681B /* Mesh+Demo.swift */; };
-		EB7BBD4C2A82B50B004DC538 /* SurfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C4D732A829CDB002E681B /* SurfaceView.swift */; };
 		EB7BBD4D2A82B510004DC538 /* BoringListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C4D772A829E00002E681B /* BoringListView.swift */; };
 		EB7BBD502A82B6EF004DC538 /* MindMap in Frameworks */ = {isa = PBXBuildFile; productRef = EB7BBD4F2A82B6EF004DC538 /* MindMap */; };
 		EB7C4D7A2A82A1BE002E681B /* WalletMapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C4D792A82A1BE002E681B /* WalletMapModel.swift */; };
@@ -47,8 +45,6 @@
 		EB67FA022A7FF62C00F8B48A /* WalletMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB67FA062A7FF62C00F8B48A /* WalletMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletMapUITests.swift; sourceTree = "<group>"; };
 		EB67FA082A7FF62C00F8B48A /* WalletMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EB7C4D732A829CDB002E681B /* SurfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceView.swift; sourceTree = "<group>"; };
-		EB7C4D752A829D06002E681B /* Mesh+Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mesh+Demo.swift"; sourceTree = "<group>"; };
 		EB7C4D772A829E00002E681B /* BoringListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringListView.swift; sourceTree = "<group>"; };
 		EB7C4D792A82A1BE002E681B /* WalletMapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletMapModel.swift; sourceTree = "<group>"; };
 		EB7C4D7B2A82A304002E681B /* MindMap */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MindMap; sourceTree = "<group>"; };
@@ -158,7 +154,6 @@
 		EB7C4D7F2A82A43B002E681B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				EB7C4D752A829D06002E681B /* Mesh+Demo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -166,7 +161,6 @@
 		EB7C4D802A82A448002E681B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EB7C4D732A829CDB002E681B /* SurfaceView.swift */,
 				EB7C4D772A829E00002E681B /* BoringListView.swift */,
 			);
 			path = Presentation;
@@ -306,8 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB7BBD4D2A82B510004DC538 /* BoringListView.swift in Sources */,
-				EB7BBD4C2A82B50B004DC538 /* SurfaceView.swift in Sources */,
-				EB7BBD4B2A82B50B004DC538 /* Mesh+Demo.swift in Sources */,
 				EB7C4D7A2A82A1BE002E681B /* WalletMapModel.swift in Sources */,
 				EB67F9EC2A7FF62800F8B48A /* WalletMapApp.swift in Sources */,
 			);

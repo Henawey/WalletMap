@@ -25,7 +25,7 @@ struct EdgeMapView_Previews: PreviewProvider {
     start: .zero,
     end: CGPoint(x: 100, y: 30))
   
-  @State static var edges = [proxy1, proxy2]
+    @State static var edges = [proxy1, proxy2]
   
   static var previews: some View {
     EdgeMapView(edges: $edges)

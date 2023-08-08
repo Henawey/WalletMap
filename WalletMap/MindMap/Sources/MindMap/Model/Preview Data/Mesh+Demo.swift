@@ -2,9 +2,8 @@
 
 import Foundation
 import CoreGraphics
-import MindMap
 
-extension Mesh {
+public extension Mesh {
   static func sampleMesh() -> Mesh {
     let mesh = Mesh()
     mesh.updateNodeText(mesh.rootNode(), string: "every human has a right to", subtext: "23100")

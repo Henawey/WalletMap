@@ -13,7 +13,7 @@ struct WalletMapApp: App {
     private let model = WalletMapModel()
     var body: some Scene {
         WindowGroup {
-            SurfaceView(mesh: model.mesh,
+            DraggableMapView(mesh: model.mesh,
                         selection: model.selection)
         }
     }
