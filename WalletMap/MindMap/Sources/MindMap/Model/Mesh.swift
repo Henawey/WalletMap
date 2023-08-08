@@ -1,3 +1,5 @@
+/// Copyright (c) 2020 Razeware LLC
+
 import Foundation
 import CoreGraphics
 
